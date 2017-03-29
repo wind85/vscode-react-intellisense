@@ -12,16 +12,18 @@
     "watchify": "^3.4.0"
   },
   "scripts": {
-    "preinstall": "npm i typings -D && typings i dt~react dt~react-dom -G -D",
+    "preinstall": "npm i typings -D && typings i dt~react dt~react-dom -D",
     "build": "browserify ./public/index.js -t babelify -o ./public/bundle.js",
     "start": "clear && node server.js & watchify ./public/index.js -v -t babelify -o ./public/bundle.js"
   },
   "description": "A blank project to get Intellisense for React in Visual Studio Code",
   "main": "index.js",
-  "devDependencies": {},
+  "devDependencies": {
+    "typings": "^2.1.0"
+  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/didierfranc/vscode-react-intellisense.git"
+    "url": "git+https://github.com/wind85/vscode-react-intellisense.git"
   },
   "keywords": [
     "react",
@@ -33,7 +35,7 @@
   "author": "Didier Franc",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/didierfranc/vscode-react-intellisense/issues"
+    "url": "https://github.com/wind85/vscode-react-intellisense/issues"
   },
-  "homepage": "https://github.com/didierfranc/vscode-react-intellisense#readme"
+  "homepage": "https://github.com/wind85/vscode-react-intellisense#readme"
 }

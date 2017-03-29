@@ -1,5 +1,5 @@
-import React from 'react'
-import ReactDom from 'react-dom'
+import React from 'react';
+import ReactDOM from 'react-dom';
 
 var HelloMessage = React.createClass({
   render: function() {
@@ -7,4 +7,4 @@ var HelloMessage = React.createClass({
   }
 })
 
-ReactDOM.render(<HelloMessage name="Mark" />, document.getElementbyId('content'))
+ReactDOM.render(<HelloMessage name="Mark" />, document.getElementById('content'))
