@@ -1,10 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {Button, Container, Menu} from 'semantic-ui-react';
 
-var HelloMessage = React.createClass({
-  render: function() {
-    return <div>Hello {this.props.name}</div>
+import injectTapEventPlugin from 'react-tap-event-plugin';
+injectTapEventPlugin();
+
+import {MenuPublic, MenuPrivate} from './menu.js'
+import CustomGrid from './geargrid.js'
+
+var MainComponent = React.createClass({
+  render: function () {
+    return <Container fluid>
+      <MenuPrivate/>
+      <CustomGrid/>
+    </Container>
   }
 })
 
-ReactDOM.render(<HelloMessage name="Mark" />, document.getElementById('content'))
+ReactDOM.render(
+  <MainComponent/>, document.getElementById('content'))
